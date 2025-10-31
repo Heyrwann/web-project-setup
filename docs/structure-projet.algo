@@ -1,0 +1,15 @@
+"""
+1. Création de la structure du projet
+Objectif : Créer un script qui génère automatiquement la structure d'un site web statique
+"""
+
+Début
+	créer dossier "mon-site-exemple"
+
+    // "Créer les dossiers à la racine"
+
+    // "Créer les fichiers à la racine"
+
+    // "Entrer dans chaque dossier racine 1 par 1 puis créer ses sous-dossiers et fichiers"
+
+Fin
