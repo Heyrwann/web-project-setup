@@ -4,6 +4,25 @@ Objectif : Créer un script qui génère automatiquement la structure d'un site 
 """
 
 Début
+    variables pwd, projectPath, projectName en chaînes
+
+    pwd <- stocker chemin du dossier de travail
+
+    // "Indiquer à l'utilisateur dans quel répertoire il se trouve"
+    écrire "Position actuelle :" + pwd
+
+    // "Demander à l'utilisateur d'indiquer où le programme doit créer le projet"
+    écrire "Indiquer le chemin pour la création du projet :"
+    lire projectPath
+
+    // "Demander à l'utilisateur de saisir un nom de projet"
+    écrire "Saisir le nom du projet :"
+    lire projectName
+
+    // "--------------------------------------"
+    // "Création de la structure du projet web"
+    // "--------------------------------------"
+
 	créer dossier "mon-site-exemple"
 
     // "Créer les dossiers à la racine"
