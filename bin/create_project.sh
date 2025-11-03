@@ -4,10 +4,33 @@
 
 echo "[BIP] Début du programme... [BOOP]"
 
+###
+# Demander le chemin et le nom du projet à l'utilisateur
+###
+
+# Indiquer à l'utilisateur dans quel répertoire il se trouve
+echo "[BIP] Répertoire actuel :"
+echo -----
+pwd
+echo -----
+
+# Demander à l'utilisateur d'indiquer où le programme doit créer le projet
+read -p "[BIP] Indiquer où je doit créer le projet (le dossier doit exister) :" projectPath
+echo "[BIP] Le chemin donné est : " $projectPath
+
+# Demander à l'utilisateur de saisir un nom de projet
+read -p "[BIP] Saisissez le nom du projet :" projectName
+echo "[BIP] Le nom du projet sera : " $projectName
+
+###
+# Créer la structure du projet web
+###
+
 # Création du dossier projet et déplacement dedans
 echo "[BIP] Création du dossier projet [BOOP]"
-mkdir mon-site-example
-cd mon-site-example
+cd $projectPath
+mkdir $projectName
+cd $projectName
 
 # Création des dossiers de premier niveau
 mkdir .well-known assets img pages scss docs

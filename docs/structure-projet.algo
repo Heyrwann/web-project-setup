@@ -1,6 +1,9 @@
 """
 1. Création de la structure du projet
-Objectif : Créer un script qui génère automatiquement la structure d'un site web statique
+Objectif : Créer un script qui génère automatiquement la structure d'un site web statique.
+
+2. Script Bash
+Objectif : Générer la structure de projet sur Linux/Mac en guidant l'utilisateur.
 """
 
 Début
