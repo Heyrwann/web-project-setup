@@ -15,3 +15,24 @@ echo [BIP] Début du programme... [BOOP]
 echo [BIP] Création du dossier projet [BOOP]
 mkdir "example-project"
 cd example-project
+
+:: Création des dossiers de premier niveau
+mkdir .well-known assets img pages scss docs
+
+:: Création des fichiers de premier niveau
+echo. > .browserslistrc
+echo. > 403.html
+echo. > 404.html
+echo. > LICENSE
+echo. > README.md
+echo. > favicon.png
+echo. > index.html
+echo. > robots.txt
+echo. > sitemap.xml
+echo. > .editorconfig
+
+:: Remplissage de .well-known/
+cd .well-known
+echo. > security.txt
+cd ..
+echo "[BIP] Dossier .well-known/ créé [BOOP]"
