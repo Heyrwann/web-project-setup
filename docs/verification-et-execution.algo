@@ -1,0 +1,17 @@
+"""
+Script Batch (wps.cmd) - Vérification et exécution
+Objectif : Vérifier si le script Bash existe et le lancer si disponible (environnement Windows)
+"""
+
+Début
+    variables create_project.sh, create_project.cmd en fichiers
+
+    si create_project.sh existe alors
+		exécuter create_project.sh
+	sinonsi create_project.cmd existe alors
+		exécuter create_project.cmd
+	sinon
+		écrire "ERREUR : Aucun des fichiers de création de structure n'existe"
+	finsi
+
+Fin
