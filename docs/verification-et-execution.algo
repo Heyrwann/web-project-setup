@@ -15,3 +15,19 @@ Début
 	finsi
 
 Fin
+
+"""
+Script Bash (wps.sh) - Vérification et exécution
+Objectif : Vérifier si le script Bash existe et le lancer (environnement Linux/Mac).
+"""
+
+Début
+    variables create_project.sh en fichier
+
+    si create_project.sh existe alors
+		exécuter create_project.sh
+	sinon
+		écrire "ERREUR : Le fichier create_project n'existe pas"
+	finsi
+
+Fin
