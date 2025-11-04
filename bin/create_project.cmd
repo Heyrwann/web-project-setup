@@ -8,13 +8,33 @@ chcp 65001 > nul
 echo [BIP] Début du programme... [BOOP]
 
 ::===
+:: Demander le chemin et le nom du projet à l'utilisateur
+::===
+
+:: Indiquer à l'utilisateur dans quel répertoire il se trouve
+echo [BIP] Répertoire actuel :
+echo -----
+pwd
+echo -----
+
+:: Demander à l'utilisateur d'indiquer où le programme doit créer le projet
+set /p projectPath=[BIP] Indiquer où je doit créer le projet :
+echo [BIP] Le chemin donné est : %projectPath%
+
+:: Demander à l'utilisateur de saisir un nom de projet
+set /p projectName=[BIP] Saisissez le nom du projet : 
+echo [BIP] Le nom du projet sera : %projectName%
+
+::===
 :: Créer la structure du projet web
 ::===
 
-:: Création du dossier projet et déplacement dedans
+:: Création du dossier et déplacement dedans
 echo [BIP] Création du dossier projet [BOOP]
-mkdir "example-project"
-cd example-project
+cd %projectPath%
+mkdir %projectName%
+echo [BIP] Dossier %projectName% créé [BOOP]
+cd %projectName%
 
 :: Création des dossiers de premier niveau
 mkdir .well-known assets img pages scss docs
