@@ -11,7 +11,7 @@ Début
 	sinonsi create_project.cmd existe alors
 		exécuter create_project.cmd
 	sinon
-		écrire "ERREUR : Aucun des fichiers de création de structure n'existe"
+		écrire "[ERREUR] Aucun des fichiers de création de structure n'existe"
 	finsi
 
 Fin
@@ -27,7 +27,7 @@ Début
     si create_project.sh existe alors
 		exécuter create_project.sh
 	sinon
-		écrire "ERREUR : Le fichier create_project n'existe pas"
+		écrire "[ERREUR] Le fichier create_project n'existe pas"
 	finsi
 
 Fin

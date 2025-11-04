@@ -4,7 +4,7 @@
 # Création de la structure d'un projet Web #
 ############################################
 
-echo "[BIP] Début du programme... [BOOP]"
+echo "[BIP] Initialisation de la création de la structure..."
 
 ###
 # Demander le chemin et le nom du projet à l'utilisateur
@@ -17,7 +17,7 @@ pwd
 echo -----
 
 # Demander à l'utilisateur d'indiquer où le programme doit créer le projet
-read -p "[BIP] Indiquer où je doit créer le projet (le dossier doit exister) :" projectPath
+read -p "[BIP] Indiquer où devra être créé le projet (le dossier doit exister) :" projectPath
 echo "[BIP] Le chemin donné est : " $projectPath
 
 # Demander à l'utilisateur de saisir un nom de projet
@@ -29,7 +29,7 @@ echo "[BIP] Le nom du projet sera : " $projectName
 ###
 
 # Création du dossier projet et déplacement dedans
-echo "[BIP] Création du dossier projet [BOOP]"
+echo "[BIP] Création du dossier projet"
 cd $projectPath
 mkdir $projectName
 cd $projectName
@@ -44,7 +44,7 @@ touch .browserslistrc 403.html 404.html LICENSE README.md favicon.png index.html
 cd .well-known
 touch security.txt
 cd ..
-echo "[BIP] Création du dossier .well-known/ [BOOP]"
+echo "[BIP] Dossier .well-known/ créé"
 
 # Remplissage assets/
 cd assets
@@ -56,19 +56,19 @@ touch NotoSans-VariableFont.woff2 OFL.txt README.txt
 cd ../js
 touch app.js
 cd ../..
-echo "[BIP] Création du dossier assets/ [BOOP]"
+echo "[BIP] Dossier assets/ créé"
 
 # Remplissage img/
 cd img
 mkdir icons
 cd ..
-echo "[BIP] Création du dossier img/ [BOOP]"
+echo "[BIP] Dossier img/ créé"
 
 # Remplissage pages/
 cd pages
 touch about.html article-details.html blog.html contact.html cookies-policy.html faq.html legal-notice.html portfolio.html privacy-policy.html project-details.html search-results.html service-details.html services.html team.html terms-conditions.html testimonials.html
 cd ..
-echo "[BIP] Création du dossier pages/ [BOOP]"
+echo "[BIP] Dossier pages/ créé"
 
 # Remplissage scss/
 cd scss
@@ -87,14 +87,15 @@ touch _about.scss _home.scss _index.scss
 cd ../utilities
 touch _accessibility.scss _alignment.scss _display.scss _flexbox.scss _grid.scss _index.scss _spacing.scss _visibility.scss
 cd ../..
-echo "[BIP] Création du dossier scss/ [BOOP]"
+echo "[BIP] Dossier scss/ créé"
 
 # Remplissage docs/
 cd docs
 mkdir architecture diagrams security
 touch architecture/overview.md workflow.md README.md
-echo "[BIP] Création du dossier docs/ [BOOP]"
+echo "[BIP] Dossier docs/ créé"
 cd ..
 
 ## Programme terminé
-echo "[BIP] ...Programme terminé [BIP]"
+echo "[BOOP] Programme terminé"
+echo "------------"

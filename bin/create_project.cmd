@@ -5,7 +5,7 @@ chcp 65001 > nul
 :: Création de la structure d'un projet Web
 ::=========================================
 
-echo [BIP] Début du programme... [BOOP]
+echo [BIP] Initialisation de la création de la structure...
 
 ::===
 :: Demander le chemin et le nom du projet à l'utilisateur
@@ -30,10 +30,10 @@ echo [BIP] Le nom du projet sera : %projectName%
 ::===
 
 :: Création du dossier et déplacement dedans
-echo [BIP] Création du dossier projet [BOOP]
+echo [BIP] Création du dossier projet
 cd %projectPath%
 mkdir %projectName%
-echo [BIP] Dossier %projectName% créé [BOOP]
+echo [BIP] Dossier %projectName% créé
 cd %projectName%
 
 :: Création des dossiers de premier niveau
@@ -55,7 +55,7 @@ echo. > .editorconfig
 cd .well-known
 echo. > security.txt
 cd ..
-echo [BIP] Dossier .well-known/ créé [BOOP]
+echo [BIP] Dossier .well-known/ créé
 
 :: Remplissage de assets/
 cd assets
@@ -70,13 +70,13 @@ echo. > README.txt
 cd ../js
 echo. > app.js
 cd ../..
-echo [BIP] Dossier assets/ créé [BOOP]
+echo [BIP] Dossier assets/ créé
 
 :: Remplissage de img/
 cd img
 mkdir icons
 cd ..
-echo [BIP] Création du dossier img/ [BOOP]
+echo [BIP] Création du dossier img/ 
 
 :: Remplissage de pages/
 cd pages
@@ -97,7 +97,7 @@ echo. > team.html
 echo. > terms-conditions.html
 echo. > testimonials.html
 cd ..
-echo [BIP] Dossier pages/ créé [BOOP]
+echo [BIP] Dossier pages/ créé
 
 :: Remplissage de scss/
 cd scss
@@ -139,7 +139,7 @@ echo. > _index.scss
 echo. > _spacing.scss
 echo. > _visibility.scss
 cd ../..
-echo [BIP] Dossier scss/ créé [BOOP]
+echo [BIP] Dossier scss/ créé
 
 :: Remplissage de docs/
 cd docs
@@ -149,8 +149,9 @@ echo. > README.md
 cd architecture
 echo. > overview.md
 cd ..
-echo [BIP] Dossier docs/ créé [BOOP]
+echo [BIP] Dossier docs/ créé
 cd ..
 
 :: Programme terminé
-echo [BIP] ...Programme terminé [BIP]
+echo [BOOP] Programme terminé
+echo ------------
