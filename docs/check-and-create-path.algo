@@ -1,0 +1,37 @@
+"""
+Objectif : Vérifier si le path donné par l'utilisateur existe, sinon lui demander s'il souhaite le créer.
+"""
+
+Fonction askYesNo(question en chaîne) Retourne booléen
+	écrire question + " (o/n) : "
+	répéter
+        variable userInput en caractère
+		lire userInput
+
+        si userInput = "o" OU userInput = "O" alors
+		    Return True
+        sinonsi userInput = "n" OU userInput = "N" alors
+            Return False
+        sinon
+            écrire "Réponse invalide. Entrer 'o' pour Oui ou 'n' pour Non."
+        finsi
+
+	tantque Return <> True OU False
+FinFonction
+
+Début
+	variable path en chaîne
+    variable validator en caractère
+
+    si path existe alors
+        continuer avec create_project
+	sinon
+		écrire "Le chemin indiqué n'existe pas."
+        createPath = askYesNo("Voulez-vous le créer ?") 
+        si createPath = True alors
+            créer path
+        sinon
+            écrire "Opération annulée"
+        finsi
+	finsi
+Fin
