@@ -35,19 +35,40 @@ pwd
 echo -----
 
 # Demander à l'utilisateur d'indiquer où le programme doit créer le projet
-read -p "[BIP] Indiquer où devra être créé le projet (le dossier doit exister) :" projectPath
-echo "[BIP] Le chemin donné est : " $projectPath
+read -p "[BIP] Indiquer où devra être créé le projet :" projectPath
+
+# Vérifier si le chemin existe
+if [ -d "${projectPath}" ]; then
+    echo "[BIP] Le chemin existe"
+else
+    echo "[BIP] Le chemin $projectPath n'existe pas"
+    if askYesNo "[BIP] Voulez-vous le créer ?"; then
+        echo "[BIP] Le dossier ${projectPath} sera créé"
+    else
+        echo "[BOOP] Programme terminé"
+        echo "------------"
+        exit
+    fi
+fi
 
 # Demander à l'utilisateur de saisir un nom de projet
 read -p "[BIP] Saisissez le nom du projet :" projectName
 echo "[BIP] Le nom du projet sera : " $projectName
+
+# Vérification finale avant création
+if askYesNo "[BIP] Confirmer la création de $projectName dans $projectPath"; then
+    echo "[BIP] Création du dossier projet"
+else
+    echo "[BOOP] Programme terminé"
+    echo "------------"
+    exit
+fi
 
 ###
 # Créer la structure du projet web
 ###
 
 # Création du dossier projet et déplacement dedans
-echo "[BIP] Création du dossier projet"
 cd $projectPath
 mkdir $projectName
 cd $projectName
