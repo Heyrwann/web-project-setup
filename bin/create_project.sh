@@ -4,6 +4,24 @@
 # Création de la structure d'un projet Web #
 ############################################
 
+# Fonction utilitaire pour récolter le prompt (o/n) de l'utilisateur
+function askYesNo {
+    # $prompt prend la valeur du premier argument
+    local prompt="$1"
+
+    # Boucle infinie
+    while true; do
+        read -p "$prompt (o/n) : " userInput
+        if [[ $userInput == "o" || $userInput == "O" ]]; then
+            return 0    # True
+        elif [[ $userInput == "n" || $userInput == "N" ]]; then
+            return 1    # False
+        else
+            echo "[ERREUR] Réponse invalide. Entrer 'o' pour Oui ou 'n' pour Non."
+        fi
+    done
+}
+
 echo "[BIP] Initialisation de la création de la structure..."
 
 ###
