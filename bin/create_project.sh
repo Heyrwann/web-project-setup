@@ -4,7 +4,7 @@
 # Création de la structure d'un projet Web #
 ############################################
 
-# Fonction utilitaire pour récolter le prompt (o/n) de l'utilisateur
+# Fonction utilitaire askYesNo pour récolter le prompt (o/n) de l'utilisateur
 function askYesNo {
     # $prompt prend la valeur du premier argument
     local prompt="$1"

@@ -1,4 +1,5 @@
 @echo off
+setlocal enabledelayedexpansion
 chcp 65001 > nul
 
 ::=========================================
@@ -19,17 +20,41 @@ echo -----
 
 :: Demander à l'utilisateur d'indiquer où le programme doit créer le projet
 set /p projectPath=[BIP] Indiquer où je doit créer le projet :
-echo [BIP] Le chemin donné est : %projectPath%
+echo [BIP] Le chemin donné est : "%projectPath%"
 
-:: Demander à l'utilisateur de saisir un nom de projet
-set /p projectName=[BIP] Saisissez le nom du projet : 
-echo [BIP] Le nom du projet sera : %projectName%
+:: Vérifier si le chemin existe
+if exist "%projectPath%\" (
+    echo le chemin "%projectPath%" existe.
+    goto :createProjectStructure
+) else (
+    echo le chemin "%projectPath%" n'existe pas.
+    call :askYesNo "Voulez-vous le créer ?"
+
+    if !userChoice! equ 0 (
+        echo Création de "%projectPath%"...
+        mkdir "%projectPath%" 2>nul && (
+            echo Le chemin a été créé avec succès.
+        ) || (
+            echo Erreur : Impossible de créer "%projectPath%"
+        )
+    ) else (
+        echo Opération annulée
+        goto :end
+    )
+)
+
+:: goto :createProjectStructure
 
 ::===
 :: Créer la structure du projet web
 ::===
 
 :: Création du dossier et déplacement dedans
+:: :createProjectStructure
+:: Demander à l'utilisateur de saisir un nom de projet
+set /p projectName=[BIP] Saisissez le nom du projet : 
+echo [BIP] Le nom du projet sera : "%projectName%"
+
 echo [BIP] Création du dossier projet
 cd %projectPath%
 mkdir %projectName%
@@ -153,5 +178,31 @@ echo [BIP] Dossier docs/ créé
 cd ..
 
 :: Programme terminé
+:end
 echo [BOOP] Programme terminé
 echo ------------
+exit
+
+:: Fonction utilitaire askYesNo pour récolter le prompt (o/n) de l'utilisateur
+:askYesNo
+    set "question=%~1"
+
+    :askLoop
+        set /p "userInput=%question% (o/n) : "
+        
+        if /i "!userInput!"=="o" (
+            echo Vous avez répondu Oui.
+            set "userChoice=0"
+            exit /b 0
+        ) 
+        if /i "!userInput!"=="n" (
+            echo Vous avez répondu Non.
+            set "userChoice=1"
+            exit /b 1
+        )
+
+        test="!userInput!"
+        echo Vous avez entré "%userInput%"
+        echo Test : "%test%"
+        echo Réponse invalide. Veuillez entrer 'o' ou 'n'.
+        goto :askLoop
