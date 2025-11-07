@@ -17,4 +17,6 @@ if [ -f "${pathToCreateProjectSh}" ]; then
     ${pathToCreateProjectSh}
 else
     echo "[ERREUR] Le fichier /bin/create_project.sh n'existe pas"
+    echo "[BOOP] Programme terminé"
+    echo "------------"
 fi

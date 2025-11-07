@@ -55,6 +55,10 @@ Lancer le script `wps.sh` pour lancer le script de création :
 ./wps.sh
 ```
 
+### Démonstrations de fonctionnement
+
+Regarder dans [le dossier ./docs/videos](./docs/videos/) pour observer le fonctionnement des scripts.
+
 ---
 
 ## Structure générée
