@@ -59,10 +59,6 @@ Lancer le script `wps.sh` pour lancer le script de création :
 
 Regarder dans [le dossier ./docs/videos](./docs/videos/) pour observer le fonctionnement des scripts.
 
-Par exemple :
-
-![Video bash-file-creation](./docs/videos/bash-file-creation.mp4)
-
 ---
 
 ## Structure générée
