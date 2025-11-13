@@ -1,0 +1,37 @@
+"""
+1. Création de la structure du projet
+Objectif : Créer un script qui génère automatiquement la structure d'un site web statique.
+
+2. Script Bash & Batch
+Objectif : Générer la structure de projet sur Linux/Mac en guidant l'utilisateur.
+"""
+
+Début
+    variables pwd, projectPath, projectName en chaînes
+
+    pwd <- stocker chemin du dossier de travail
+
+    // "Indiquer à l'utilisateur dans quel répertoire il se trouve"
+    écrire "Position actuelle :" + pwd
+
+    // "Demander à l'utilisateur d'indiquer où le programme doit créer le projet"
+    écrire "Indiquer le chemin pour la création du projet :"
+    lire projectPath
+
+    // "Demander à l'utilisateur de saisir un nom de projet"
+    écrire "Saisir le nom du projet :"
+    lire projectName
+
+    // "--------------------------------------"
+    // "Création de la structure du projet web"
+    // "--------------------------------------"
+
+	créer dossier "mon-site-exemple"
+
+    // "Créer les dossiers à la racine"
+
+    // "Créer les fichiers à la racine"
+
+    // "Entrer dans chaque dossier racine 1 par 1 puis créer ses sous-dossiers et fichiers"
+
+Fin
