@@ -188,6 +188,12 @@ NB: Le contenu du dossier `icons`, ainsi que `package.json` et `package-lock.jso
 
 ---
 
+## Preview
+
+https://github.com/user-attachments/assets/79adac37-9a19-47f9-8a01-c18788033ae3
+
+---
+
 ## Licence
 
 Ce projet est sous licence [MIT](LICENSE).
