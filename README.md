@@ -190,7 +190,7 @@ NB: Le contenu du dossier `icons`, ainsi que `package.json` et `package-lock.jso
 
 ## Preview
 
-https://github.com/user-attachments/assets/79adac37-9a19-47f9-8a01-c18788033ae3
+https://github.com/user-attachments/assets/0ca4cc21-d91f-46de-bb68-7b9570bfabda
 
 ---
 
